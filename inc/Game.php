@@ -40,7 +40,7 @@ class Game{
             return '<h1> Your answers were highly illogical... <br> Your Star Trek character was '. $this->phrase->currentPhrase .'<h1>
             <form action="play.php" method="POST">
             <div id="overlay">
-            <input id="btn__reset" type="submit" name="new" value="Re-enter the holodeck for another round?"/>
+            <input id="btn__reset" type="submit" name="new" value="Re-engage?"/>
             </form>
             </div>';
         
@@ -49,7 +49,7 @@ class Game{
             return '<h1> You made it so, Number One! <br> Your Star Trek character was '. $this->phrase->currentPhrase .'<h1>
             <form action="play.php" method="POST">
             <div id="overlay">
-            <input id="btn__reset" type="submit" name="new" value="Re-enter the holodeck for another round?"/>
+            <input id="btn__reset" type="submit" name="new" value="Re-engage?"/>
             </form>
             </div>';
         }

@@ -8,7 +8,6 @@ require "inc/Game.php";
 if(isset($_POST['engage'])) {
     unset($_SESSION['selected']);
     unset($_SESSION['phrase']);
-    $phrase = new Phrase();
   }
 $phrase = filter_input(INPUT_GET, 'key', FILTER_SANITIZE_STRING);
  if (!empty($phrase)) {
