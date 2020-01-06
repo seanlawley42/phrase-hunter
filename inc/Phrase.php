@@ -47,15 +47,15 @@ class Phrase{
         
         /*When the player correctly guesses a letter, the empty box is replaced with the matched letter. 
         Use the class "hide" to hide a letter and "show" to show a letter.*/
-        foreach ($splitLetters as $letter){
-            if(in_array($letter, $this->selected)){
-                $phraseToDisplay.= '<li class="show letter">' . $letter . "</li>";
+        foreach ($splitLetters as $splitLetter){
+            if(in_array($splitLetter, $this->selected)){
+                $phraseToDisplay.= '<li class="show letter">' . $splitLetter . "</li>";
             }
             elseif ($letter = " "){
-                $phraseToDisplay.= '<li class="space">' . $letter . "</li>";
+                $phraseToDisplay.= '<li class="space">' . $splitLetter. "</li>";
             }
             else{
-                $phraseToDisplay.= '<li class="hide letter">' . $letter . "</li>";
+                $phraseToDisplay.= '<li class="hide letter">' . $splitLetter . "</li>";
             }
         }
         $phraseToDisplay.= "</div>";
