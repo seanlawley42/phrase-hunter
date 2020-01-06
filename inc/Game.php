@@ -16,27 +16,27 @@ class Game{
     public function checkForWin(){
         //This method checks to see if the player has selected all of the letters.
         if (count(array_intersect($this->phrase->selected, $this->phrase->getLetterArray()))== count($this->phrase->getLetterArray())){
-            return true;
+            return TRUE;
         }
         else {
-            return false;
+            return FALSE;
         }
     }
 
     public function checkForLose(){
         //This method checks to see if the player has guessed too many wrong letters.
         if($this->phrase->getLost() == $this->lives){
-            return true;
+            return TRUE;
         }
         else{
-            return false;
+            return FALSE;
         }
     }
 
     public function gameOver(){
         /*This method displays one message if the player wins and another message if they lose. 
         It returns false if the game has not been won or lost.*/
-        if ($this->checkForLose() == true){
+        if ($this->checkForLose() == TRUE){
             return '<h1> Your answers were highly illogical... <br> Your Star Trek character was '. $this->phrase->currentPhrase .'<h1>
             <form action="play.php" method="POST">
             <div id="overlay">
@@ -45,7 +45,7 @@ class Game{
             </div>';
         
         }
-        elseif ($this->checkForWin() == true){
+        elseif ($this->checkForWin() == TRUE){
             return '<h1> You made it so, Number One! <br> Your Star Trek character was '. $this->phrase->currentPhrase .'<h1>
             <form action="play.php" method="POST">
             <div id="overlay">
@@ -54,7 +54,7 @@ class Game{
             </div>';
         }
         else{
-            return false;
+            return FALSE;
         }
     }
 

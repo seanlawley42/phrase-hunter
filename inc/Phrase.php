@@ -12,7 +12,7 @@ class Phrase{
 
     /*Class file includes a constructor which accepts two optional parameters 
     for a phrase string and a selected array.*/
-    public function __construct($phrase = null, $selected=null){
+    public function __construct($phrase = null, $selected=[]){
         //If a phrase is not passed, a phrase is randomly selected from a list.
         if($phrase == null){
             $this->currentPhrase = wordBankRandomizer();
