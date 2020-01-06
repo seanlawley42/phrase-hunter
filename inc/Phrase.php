@@ -62,13 +62,11 @@ class Phrase{
         return $phraseToDisplay;
     }
 
-    public function checkLetter($letter){
+    public function checkLetter($indvidualButton){
         /*Checks to see if a letter matches a letter in the phrase. 
         Accepts a single letter to check against the phrase. 
         Returns true or false.*/
-        $starTrekCharacter = $this->getLetterArray();
-
-        if(in_array($letter, $starTrekCharacter)){
+        if(in_array($indvidualButton, $this->getLetterArray())){
             return true;
         }
         else{
